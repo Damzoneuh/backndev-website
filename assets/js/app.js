@@ -1,8 +1,9 @@
 import React , {Component} from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import '../sass/global.scss';
 
-export default class Index extends Component{
+export default class App extends Component{
     render() {
         return(
             <div>Hello world</div>
@@ -10,4 +11,4 @@ export default class Index extends Component{
     }
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
