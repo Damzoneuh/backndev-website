@@ -69,7 +69,7 @@ Encore
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     .enableReactPreset()
-    //.addEntry('admin', './assets/js/admin.js')
+    .addEntry('footer', './assets/js/footer.js')
 ;
 
 module.exports = Encore.getWebpackConfig();

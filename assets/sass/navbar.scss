@@ -1,0 +1,11 @@
+@import "global";
+
+.dropdown-link{
+  color: $link-white;
+}
+
+.dropdown-link:hover{
+  color: $link-white-hover;
+  text-shadow: 0 0 25px $link-white-hover;
+}
+
