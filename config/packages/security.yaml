@@ -14,6 +14,9 @@ security:
         main:
             anonymous: ~
             http_basic: ~
+            logout:
+                path:   app_logout
+                target: index
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
