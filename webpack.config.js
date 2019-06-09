@@ -71,6 +71,7 @@ Encore
     .enableReactPreset()
     .addEntry('footer', './assets/js/footer.js')
     .addEntry('index', './assets/js/index/index.js')
+
 ;
 
 module.exports = Encore.getWebpackConfig();
