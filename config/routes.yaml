@@ -2,6 +2,10 @@ index:
     path: /
     controller: App\Controller\HomeController::index
 
+admin:
+    path: /admin
+    controller: App\Controller\AdminController::index
+
 api_get_slug:
     path: /api/slug/{id}
     controller: App\Controller\ApiController::getSlug
