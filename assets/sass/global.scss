@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Roboto-thin';
+  src: url("../font/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-condensed';
+  src: url("../font/Roboto-Condensed.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url("../font/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url("../font/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-medium';
+  src: url("../font/Roboto-Medium.ttf");
+}
+
+$link-white: rgb(255,240,240) !important;
+$link-white-hover: rgb(200,240,250) !important;
+$black-hover: rgb(20,20,20) !important;
+$dark-blue: rgb(15, 30, 45) !important;
+$light-blue: rgb(97, 189, 248) !important;
+
+
+body{
+  min-height: 100vh;
+  font-family: Roboto-medium, sans-serif;
+}
+
+.nav-menu{
+  top: 4.5em;
+  width: 15em;
+}
+
+a{
+  outline: none;
+}
+
+.p-white{
+  color: $link-white;
+}
+
+.dark-blue{
+  background-color: $dark-blue;
+}
+
+.icon-small{
+  font-size: 18px ;
+}
+
+.font-2{
+ font-size: 2em;
+}
+
+.font-3{
+  font-size: 3em;
+}
