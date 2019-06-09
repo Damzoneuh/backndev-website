@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Index{% endblock %}
+{% block title %} App{% endblock %}
 {% block stylesheets %}{{ parent() }}{% endblock %}
 {% block body %}
 
 {% endblock %}
 
-{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('index') }}{% endblock %}
+{% block footer %}{% include('footer.html.twig') %}{% endblock %}
+{% block javascripts %}{{ parent() }}{{ encore_entry_script_tags('app') }}{% endblock %}
