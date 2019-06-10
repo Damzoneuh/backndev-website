@@ -7,4 +7,4 @@
 {% endblock %}
 
 {% block footer %}{% include('footer.html.twig') %}{% endblock %}
-{% block javascripts %}{{ parent() }}{{ encore_entry_script_tags('app') }} {{ encore_entry_script_tags('index') }}{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('index') }}{% endblock %}
