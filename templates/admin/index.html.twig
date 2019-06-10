@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Admin space{% endblock %}
+
+{% block body %}
+    <div id="admin"></div>
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }} {{ encore_entry_link_tags('admin') }}{% endblock %}
+{% block javascripts %}{{ parent() }} {{ encore_entry_script_tags('admin') }}{% endblock %}

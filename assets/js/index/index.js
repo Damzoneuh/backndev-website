@@ -73,41 +73,44 @@ export default class Index extends Component{
         }
         if (slugId && isLoaded){
             return (
-                <div className="row">
-                    {slugs.success.id ?
-                        <div className="col-lg-6 col-12">
-                            <div className="wrap-slug">
-                                <div className="title" key={slugs.success.id}>
-                                    <h2>{slugs.success.title}</h2>
+                <div className="container">
+                    <div className="row">
+                        {slugs.success.id ?
+                            <div className="col-12">
+                                <div className="wrap-slug">
+                                    <div className="title" key={slugs.success.id}>
+                                        <h2>{slugs.success.title}</h2>
+                                    </div>
+                                    <div className="slug-content" dangerouslySetInnerHTML={{ __html: slugs.success.description }}>
+
+                                    </div>
+                                    <button className="btn btn-primary btn-group"
+                                            onClick={() => this.getAllSlugs()}>Retour
+                                    </button>
                                 </div>
-                                <div className="slug-content">
-                                    {slugs.success.description}
-                                </div>
-                                <button className="btn btn-primary btn-group"
-                                        onClick={() => this.getAllSlugs()}>Retour
-                                </button>
                             </div>
-                        </div>
-                    : ''}
+                        : ''}
+                    </div>
                 </div>
             )
         }
         else {
             return (
-                <div className="row">
-                    {slugs.success && slugs.success.length > 0? slugs.success.map((slug) => {
-                        console.log(slug);
-                        return (
-                            <div className="col-lg-6 col-12">
-                                <div className="wrap-slug">
-                                    <div className="title" key={slug.id}>
-                                        <h2>{slug.title}</h2>
+                <div className="container">
+                    <div className="row">
+                        {slugs.success && slugs.success.length > 0? slugs.success.map((slug) => {
+                            return (
+                                <div className="col-lg-6 col-12" key={slug.id}>
+                                    <div className="wrap-slug">
+                                        <div className="title" >
+                                            <h2>{slug.title}</h2>
+                                        </div>
+                                        <button className="btn btn-primary btn-group" onClick={() => this.handleSlugId(slug.id)}>Voir plus</button>
                                     </div>
-                                    <button className="btn btn-primary btn-group" onClick={() => this.handleSlugId(slug.id)}>Voir plus</button>
                                 </div>
-                            </div>
-                        )
-                    }) : ''}
+                            )
+                        }) : ''}
+                    </div>
                 </div>
             )
         }
