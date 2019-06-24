@@ -86,4 +86,67 @@ class ApiController extends AbstractController
 
         return $this->json(['success' => 'The slug was successfully updated'], 200);
     }
+
+    /**
+     * @Route("/api/cv", name="api_cv_information")
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function getCvInformation(){
+        $res = [
+            'header' => 'Ayant découvert le web et ses usages, je me suis révélé un passion par la création d\'applications et l\'apprentissage de plusieurs langages informatique, Je suis aujourd\'hui à la recherche d\'un poste dans lequel je pourrais m\'épanouir .',
+            'education' => [
+                [
+                    'title' => 'Symfony 3.4 et 4',
+                    'former' => 'Open Classroom',
+                    'date' => 'De Mai 2018 à Juillet 2018',
+                    'description' => 'Formation en autodidacte'
+                ],
+                [
+                    'title' => 'Certificat de formation développeur web full stack',
+                    'former'=> 'ESECAD Paris',
+                    'date' => 'De Septembre 2017 à Juin 2018',
+                    'description' => 'Formation sur les langages principaux du web : HTML / CSS / PHP / MYSQL / JAVASCRIPT'
+                ],
+                [
+                    'title' => 'BEP / CAP Mécanicien automobile',
+                    'former' => 'MFR les Ebaux Cruseilles (74)',
+                    'date' => 'De Septembre 1999 à Juin 2001',
+                    'description' => 'Mécanicien en maintenance automobile'
+                ]
+            ],
+            'experience' =>[
+                [
+                    'title' => 'Stagiaire Développeur Op',
+                    'society' => 'Infomaniak Network',
+                    'location' => 'Genève',
+                    'date' => 'De Février 2019 à aujourd\'hui',
+                    'description' => 'Développement d\'un monitoring et refonte d\'une centrale téléphonique'
+                ],
+                [
+                    'title' => 'Développeur back-end',
+                    'society' => 'Admaker',
+                    'location' => 'Paris',
+                    'date' => 'De Septembre 2018 à Décembre 2018',
+                    'description' => 'Développement d\'application interne sous symfony'
+                ],
+                [
+                    'title' => 'Mécanicien poids lourd',
+                    'society' => 'Fraikin France',
+                    'location' => 'Annecy',
+                    'date' => 'Depuis septembre 2001',
+                    'description' => 'Réparations, diagnostics éléctronique et éléctrique, carrosserie'
+                ]
+            ]
+        ];
+
+        return $this->json($res);
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @Route("/api/coffee", name="api_coffee")
+     */
+    public function getTea(){
+        return $this->json(['status' => 418, 'data' => 'I\'m a teapot'], 418);
+    }
 }
