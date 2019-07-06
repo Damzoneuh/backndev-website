@@ -93,14 +93,8 @@ class ApiController extends AbstractController
      */
     public function getCvInformation(){
         $res = [
-            'header' => 'Ayant découvert le web et ses usages, je me suis révélé un passion par la création d\'applications et l\'apprentissage de plusieurs langages informatique, Je suis aujourd\'hui à la recherche d\'un poste dans lequel je pourrais m\'épanouir .',
+            'header' => 'Passionné par le web et ses usages, je m\'épanouis par la création d\'applications et l\'apprentissage des langages informatique, Je suis aujourd\'hui à la recherche d\'un poste dans lequel je pourrais vous apporter mes compétences.',
             'education' => [
-                [
-                    'title' => 'Symfony 3.4 et 4',
-                    'former' => 'Open Classroom',
-                    'date' => 'De Mai 2018 à Juillet 2018',
-                    'description' => 'Formation en autodidacte'
-                ],
                 [
                     'title' => 'Certificat de formation développeur web full stack',
                     'former'=> 'ESECAD Paris',
@@ -120,7 +114,14 @@ class ApiController extends AbstractController
                     'society' => 'Infomaniak Network',
                     'location' => 'Genève',
                     'date' => 'De Février 2019 à aujourd\'hui',
-                    'description' => 'Développement d\'un monitoring et refonte d\'une centrale téléphonique'
+                    'description' => 'Développement d\'un monitoring et refonte d\'une centrale téléphonique, mise en place d\'un déploiment CI/CD sous Kubernetes'
+                ],
+                [
+                    'title' => 'Auto-entrepreneur',
+                    'society' => 'Backndev',
+                    'location' => 'Annecy',
+                    'date' => 'De Septembre 2018 à aujourd\'hui',
+                    'description' => 'Développement de sites divers .'
                 ],
                 [
                     'title' => 'Développeur back-end',
@@ -128,6 +129,13 @@ class ApiController extends AbstractController
                     'location' => 'Paris',
                     'date' => 'De Septembre 2018 à Décembre 2018',
                     'description' => 'Développement d\'application interne sous symfony'
+                ],
+                [
+                    'title' => 'Stage développeur full stack',
+                    'society' => 'C+ communication',
+                    'location' => 'Annecy-le-vieux',
+                    'date' => 'Mars 2018',
+                    'description' => 'création de site vitrine "from scratch"'
                 ],
                 [
                     'title' => 'Mécanicien poids lourd',
@@ -139,7 +147,25 @@ class ApiController extends AbstractController
             ]
         ];
 
-        return $this->json($res);
+        return $this->json($res, 200,['Access-Control-Allow-origin' => '*']);
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @Route("/api/skills", name="api_cv_skills")
+     */
+    public function getSkills(){
+        $res = [
+            'skills' => [
+                'Maîtrise des langages back-end php, mysql, javascript server side et des framworks Symfony, Laravel et express.js',
+                'Maîtrise des langages front-end html, css, javascript (es6, jsx, natif) et des framworks react, angular, bootstrap et materialize',
+                'Maîtrise des outils de versioning GitHub et GitLab',
+                'Maîtrise des environnements Docker',
+                'Connaissances des distributions Linux (debian, Ubuntu)'
+            ]
+        ];
+
+        return $this->json($res, 200);
     }
 
     /**

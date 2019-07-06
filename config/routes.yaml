@@ -1,6 +1,9 @@
 index:
     path: /
     controller: App\Controller\HomeController::index
+cv:
+    path: /cv
+    controller: App\Controller\HomeController::cv
 
 admin:
     path: /admin
@@ -35,4 +38,9 @@ api_cv_information:
 api_coffee:
     path: /api/coffee
     controller: App\Controller\ApiController::getTea
+    methods: [HEAD, GET]
+
+api_cv_skills:
+    path: /api/skills
+    controller: App\Controller\ApiController::getSkills
     methods: [HEAD, GET]
