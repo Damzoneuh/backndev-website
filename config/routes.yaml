@@ -1,6 +1,9 @@
 index:
     path: /
     controller: App\Controller\HomeController::index
+cv:
+    path: /cv
+    controller: App\Controller\HomeController::cv
 
 admin:
     path: /admin
@@ -26,3 +29,18 @@ api_update_slug:
     path: /admin/api/slug/update/{id}
     controller: App\Controller\ApiController::updateSlug
     methods: [HEAD, PUT]
+
+api_cv_information:
+    path: /api/cv
+    controller: App\Controller\ApiController::getCvInformation
+    methods: [HEAD, GET]
+
+api_coffee:
+    path: /api/coffee
+    controller: App\Controller\ApiController::getTea
+    methods: [HEAD, GET]
+
+api_cv_skills:
+    path: /api/skills
+    controller: App\Controller\ApiController::getSkills
+    methods: [HEAD, GET]
