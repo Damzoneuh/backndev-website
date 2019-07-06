@@ -44,7 +44,7 @@ export default class Content extends Component {
             <div className="spacer-paralax"></div>
             <div className="padd-50 slug marg-top-10">
               <h4 className="text-blue-harder">Expériences professionnelles</h4>
-                <a href="https://github.com/Damzoneuh" target="_blank" className="btn btn-primary btn-group">Lien vers mon dépôt git</a>
+                <a href="https://github.com/Damzoneuh?tab=repositories" target="_blank" className="btn btn-primary btn-group">Lien vers mon dépôt git</a>
               {data.experience.map((ex, key) => {
                 return (
                     <div key={key}>
