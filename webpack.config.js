@@ -72,6 +72,7 @@ Encore
     .addEntry('footer', './assets/js/footer.js')
     .addEntry('index', './assets/js/index/index.js')
     .addEntry('admin', './assets/js/admin/admin.js')
+    .addEntry('cv', './assets/cv/App.js');
 ;
 
 module.exports = Encore.getWebpackConfig();
